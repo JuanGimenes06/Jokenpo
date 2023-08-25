@@ -5,9 +5,13 @@ let computadorPontos = 0;
 
 let ganhador = -1;
 
+
+
 function jogar(escolha){
     jogadorEscolha = escolha;
     computadorEscolha = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+
+
 
     // jogador 1
     if(jogadorEscolha == 1 && computadorEscolha == 1){
@@ -48,23 +52,47 @@ function jogar(escolha){
         ganhador = 0
     }
 
+
+    //
+
+    document.getElementById('jogadorEscolha1').classList.remove('selecionado');
+    document.getElementById('jogadorEscolha2').classList.remove('selecionado');
+    document.getElementById('jogadorEscolha3').classList.remove('selecionado');
+
+    document.getElementById('computadorEscolha1').classList.remove('selecionado');
+    document.getElementById('computadorEscolha2').classList.remove('selecionado');
+    document.getElementById('computadorEscolha3').classList.remove('selecionado');
+
+    document.getElementById('jogadorEscolha'+jogadorEscolha).classList.add('selecionado')
+    document.getElementById('computadorEscolha'+computadorEscolha).classList.add('selecionado')
+
     // fim jogador
 
-    let mensagem = document.getElementById('mensagem')
+    let mensagem = document.getElementById('mensagem');
+    let jogador = document.getElementById('jogadorPontos')
+    let computador = document.getElementById('computadorPontos')
+
+    
 
     if (ganhador == 0){
-        mensagem.innerText = 'empate'
-        console.log(computadorEscolha)
+        mensagem.innerText = 'Empate'
     }
+
     else if(ganhador == 1){
-        mensagem.innerText = 'vitoria jogador'
-        console.log(computadorEscolha)
+        mensagem.innerText = 'Vitoria do jogador';
+        jogadorPontos++;
+        jogador.innerText = jogadorPontos
     }
+
     else if(ganhador == 2){
-        mensagem.innerText = 'vitoria computador'
-        console.log(computadorEscolha)
+        mensagem.innerText = 'Vitoria do computador';
+        computadorPontos++;
+        computador.innerText = computadorPontos
     }
+
+    
 
 
 
 }
+
