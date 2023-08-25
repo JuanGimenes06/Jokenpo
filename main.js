@@ -96,3 +96,11 @@ function jogar(escolha){
 
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    var musica = document.getElementById("musicaFundo");
+    var controleVolume = document.getElementById("controleVolume");
+
+    controleVolume.addEventListener("input", function() {
+        musica.volume = controleVolume.value;
+    });
+});
