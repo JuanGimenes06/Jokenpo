@@ -9,6 +9,11 @@ img{
     width: 100%;
     height: auto;}
 /* *** */
+@font-face {
+    font-family: 'mine';
+    src: url(minecraft/Minecraft.ttf);
+}
+/* *** */
 ul#jogadorEscolha li a:hover,
 ul#jogadorEscolha li a.selecionado,
 ul#computadorEscolha li a.selecionado{
@@ -42,9 +47,9 @@ ul#computadorEscolha li a{
     width: 200px;}
 #jogadorNome,
 #computadorNome{
-    font:600 35px Arial, sans-serif;}
+    font:200 35px 'mine', sans-serif;}
 #titulo{
-    font:650 40px Arial, sans-serif;}
+    font:250 40px 'mine', sans-serif;}
 li{
     list-style-type: none;}
 #jogador,
@@ -60,7 +65,7 @@ li{
 #jogadorPontos,
 #computadorPontos,
 #reiniciar{
-    font:500 25px Arial, sans-serif;   }
+    font:500 25px 'mine', sans-serif;   }
 #versus{
     margin: 40px 0 50px;
     color: #fff;
